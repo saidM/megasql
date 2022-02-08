@@ -1,5 +1,5 @@
 {
-  "name": "supersql",
+  "name": "megasql",
   "version": "0.0.1",
   "description": "SQL query-builder tool",
   "main": "index.js",
