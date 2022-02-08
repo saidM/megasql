@@ -1,4 +1,4 @@
-const { build } = require('../index');
+const build = require('../index');
 
 describe('#build', () => {
   describe('when missing select', () => {

@@ -51,4 +51,4 @@ const build = (options) => {
   return query;
 }
 
-module.exports = { build };
+module.exports = build;
