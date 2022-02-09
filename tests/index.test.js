@@ -16,7 +16,7 @@ describe('#build', () => {
         id: '1'
       }
     };
-    expect(build(options)).toBe('SELECT * FROM users WHERE id = :id');
+    expect(build(options)).toBe('SELECT * FROM users WHERE id = ${id}');
   });
   it('build [multiple where] query', () => {
     const options = {
@@ -27,7 +27,7 @@ describe('#build', () => {
         name: 'Saïd'
       }
     };
-    expect(build(options)).toBe('SELECT * FROM users WHERE id = :id AND name = :name');
+    expect(build(options)).toBe('SELECT * FROM users WHERE id = ${id} AND name = ${name}');
   });
   it('build [where equal] query', () => {
     const options = {
@@ -37,7 +37,7 @@ describe('#build', () => {
         name: 'eq.Saïd'
       }
     };
-    expect(build(options)).toBe('SELECT * FROM users WHERE name = :name');
+    expect(build(options)).toBe('SELECT * FROM users WHERE name = ${name}');
   });
   it('build [where like] query', () => {
     const options = {
@@ -47,7 +47,7 @@ describe('#build', () => {
         name: 'like.Saïd'
       }
     };
-    expect(build(options)).toBe('SELECT * FROM users WHERE name LIKE :name');
+    expect(build(options)).toBe('SELECT * FROM users WHERE name LIKE ${name}');
   });
   it('build [where ilike] query', () => {
     const options = {
@@ -57,7 +57,7 @@ describe('#build', () => {
         name: 'ilike.Saïd'
       }
     };
-    expect(build(options)).toBe('SELECT * FROM users WHERE name ILIKE :name');
+    expect(build(options)).toBe('SELECT * FROM users WHERE name ILIKE ${name}');
   });
   it('build [where less than] query', () => {
     const options = {
@@ -67,7 +67,7 @@ describe('#build', () => {
         id: 'lt.Saïd'
       }
     };
-    expect(build(options)).toBe('SELECT * FROM users WHERE id < :id');
+    expect(build(options)).toBe('SELECT * FROM users WHERE id < ${id}');
   });
   it('build [where less than or equal] query', () => {
     const options = {
@@ -77,7 +77,7 @@ describe('#build', () => {
         id: 'lte.Saïd'
       }
     };
-    expect(build(options)).toBe('SELECT * FROM users WHERE id <= :id');
+    expect(build(options)).toBe('SELECT * FROM users WHERE id <= ${id}');
   });
   it('build [where greater than] query', () => {
     const options = {
@@ -87,7 +87,7 @@ describe('#build', () => {
         id: 'gt.Saïd'
       }
     };
-    expect(build(options)).toBe('SELECT * FROM users WHERE id > :id');
+    expect(build(options)).toBe('SELECT * FROM users WHERE id > ${id}');
   });
   it('build [where greater than or equal] query', () => {
     const options = {
@@ -97,7 +97,7 @@ describe('#build', () => {
         id: 'gte.Saïd'
       }
     };
-    expect(build(options)).toBe('SELECT * FROM users WHERE id >= :id');
+    expect(build(options)).toBe('SELECT * FROM users WHERE id >= ${id}');
   });
   it('build [limit] query', () => {
     const options = {

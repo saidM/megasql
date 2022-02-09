@@ -1,6 +1,6 @@
 {
   "name": "megasql",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "SQL query-builder tool",
   "main": "index.js",
   "scripts": {

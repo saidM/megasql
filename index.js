@@ -31,7 +31,10 @@ const build = (options) => {
       } else if (condition == 'gte') {
         symbol = '>=';
       }
-      query += ` ${keyword} ${key} ${symbol} :${key}`;
+      query += ` ${keyword} ${key} ${symbol} `;
+      query += '${';
+      query += key;
+      query += '}';
     });
   }
   if (options.order_by) {
